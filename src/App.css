@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.start {
+    background-color: #F7AC05;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.start img {
+    width: 200px;
+    transition:ease-in-out 0.6s ;
+    margin-top: 50px;
+}
+
+.start img:hover {
+    width: 300px;
+}
+
+h2 {
+    color: white;
+    font-family: sans-serif;
+}
