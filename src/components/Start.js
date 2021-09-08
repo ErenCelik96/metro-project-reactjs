@@ -3,14 +3,12 @@ import iettLogo from "../assets/iett-logo.png"
 
 export default function Start() {
 
-     window.onload = () => {
-        let enterName = prompt("Lütfen adınızı ve soy adınızı giriniz..");
-        document.querySelector("h2").innerHTML+=`Hoşgeldiniz, sayın ${enterName} başlamak için lütfen sayfanın üst kısmındaki butona tıklayınız.`
-    }
+    let msg = prompt("Lütfen adınızı ve soyadınızı giriniz..");
+    let guest = "Misafirimiz";
 
     return (
         <div className="start">
-            <h2></h2>
+            <h2>Hoşgeldiniz, sayın <span id="guest">{msg || guest}</span>; <br/> Başlamak için lütfen sayfanın üst kısmındaki butona tıklayınız.</h2>
             <img src={iettLogo}/>
         </div>
     )
