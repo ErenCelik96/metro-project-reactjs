@@ -9,7 +9,7 @@ export default function Start() {
     return (
         <div className="start">
             <h2>Hoşgeldiniz, sayın <span id="guest">{msg || guest}</span>; <br/> Başlamak için lütfen sayfanın üst kısmındaki butona tıklayınız.</h2>
-            <img src={iettLogo}/>
+            <img src={iettLogo} alt="logo"/>
         </div>
     )
 }

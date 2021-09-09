@@ -83,5 +83,5 @@ label {
 #result {
     font-size:18px;
     text-align:center;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
