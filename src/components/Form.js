@@ -85,7 +85,7 @@ export default function Form() {
                     <option value="20">Tavşantepe</option>
                 </select>
                 <button type="button" onClick={() => result()}>Submit</button>
-                <p id="result" className="text-white">Ortalama {item} dakika sonra {} durağına varacaksınız.<br /> İyi yolculuklar dileriz..</p>
+                <p id="result" className="text-white">Ortalama {item } dakika sonra {} durağına varacaksınız.<br /> İyi yolculuklar dileriz..</p>
             </div>
         </div>
     )
