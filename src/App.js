@@ -22,7 +22,7 @@ function App() {
       </nav>
       <Switch>
           <Route path="/form" component={Form} />
-          <Route exact path="/" component={Start} />
+          <Route exact path="/istanbul_metro_ReactJsere" component={Start} />
       </Switch>
     </div>
     </Router>
