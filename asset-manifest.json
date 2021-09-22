@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/istanbul_metro_ReactJs/static/css/main.588fe6e1.chunk.css",
+    "main.js": "/istanbul_metro_ReactJs/static/js/main.e0a135bf.chunk.js",
+    "main.js.map": "/istanbul_metro_ReactJs/static/js/main.e0a135bf.chunk.js.map",
+    "runtime-main.js": "/istanbul_metro_ReactJs/static/js/runtime-main.f8f3970f.js",
+    "runtime-main.js.map": "/istanbul_metro_ReactJs/static/js/runtime-main.f8f3970f.js.map",
+    "static/js/2.354f9e99.chunk.js": "/istanbul_metro_ReactJs/static/js/2.354f9e99.chunk.js",
+    "static/js/2.354f9e99.chunk.js.map": "/istanbul_metro_ReactJs/static/js/2.354f9e99.chunk.js.map",
+    "static/js/3.48f519df.chunk.js": "/istanbul_metro_ReactJs/static/js/3.48f519df.chunk.js",
+    "static/js/3.48f519df.chunk.js.map": "/istanbul_metro_ReactJs/static/js/3.48f519df.chunk.js.map",
+    "index.html": "/istanbul_metro_ReactJs/index.html",
+    "static/css/main.588fe6e1.chunk.css.map": "/istanbul_metro_ReactJs/static/css/main.588fe6e1.chunk.css.map",
+    "static/js/2.354f9e99.chunk.js.LICENSE.txt": "/istanbul_metro_ReactJs/static/js/2.354f9e99.chunk.js.LICENSE.txt",
+    "static/media/iett-logo.6fbca804.png": "/istanbul_metro_ReactJs/static/media/iett-logo.6fbca804.png",
+    "static/media/App.css": "/istanbul_metro_ReactJs/static/media/istanbul-trafik.11be2cd0.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f8f3970f.js",
+    "static/js/2.354f9e99.chunk.js",
+    "static/css/main.588fe6e1.chunk.css",
+    "static/js/main.e0a135bf.chunk.js"
+  ]
+}
