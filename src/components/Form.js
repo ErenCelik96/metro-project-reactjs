@@ -32,7 +32,7 @@ export default function Form() {
             <div className="form-container">
                 <label for="exampleFormControlSelect1">Gidilecek Yön</label>
                 <select name="gYön" onChange={handleChange3} className="form-control mb-5" id="exampleFormControlSelect1">
-                    <option value="">Lütfen gidilecek yönü seçiniz..</option>
+                    <option value="">Lütfen gitmek istediğiniz yönü seçiniz..</option>
                     <option value="Kadıköy yönü">Kadıköy yönü</option>
                     <option value="Tavşantepe yönü">Tavşantepe yönü</option>
                 </select>
@@ -84,8 +84,8 @@ export default function Form() {
                     <option value="19">Pendik</option>
                     <option value="20">Tavşantepe</option>
                 </select>
-                <button type="button" onClick={() => result()}>Submit</button>
-                <p id="result" className="text-white">Ortalama {item } dakika sonra {} durağına varacaksınız.<br /> İyi yolculuklar dileriz..</p>
+                <button id="result-btn" type="button" onClick={() => result()}>SONUÇ</button>
+                <p id="result" className="text-white">{item<0 ?  "Hatalı durak girişi! Lütfen tekrar deneyiniz.": `Ortalama ${item} dakika sonra gitmek istediğiniz durağa varacaksınız.`} <br /> İyi yolculuklar dileriz..</p>
             </div>
         </div>
     )

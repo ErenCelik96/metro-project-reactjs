@@ -6,7 +6,7 @@
 
 nav {
     width: 100%;
-    height: 7vh;
+    height: 5vh;
     background-color: #e6e6e6;
     display: flex;
     justify-content:center;
@@ -18,7 +18,7 @@ nav {
 .start {
     background-color: #F7AC05;
     width: 100%;
-    height: 93vh;
+    height: 95vh;
     display: flex;
     justify-content:center;
     align-items:center;
@@ -50,7 +50,7 @@ h2 {
 
 .form{
     background-color: #F7AC05;
-    height: 93vh;
+    height: 95vh;
 }
 
 .form-container {
@@ -83,5 +83,16 @@ label {
 #result {
     font-size:18px;
     text-align:center;
-    /* visibility: hidden; */
+}
+
+#result-btn {
+    margin-bottom:20px;
+    background-color: #f01e41;
+    color: white;
+    font-weight:500;
+    border-radius: 5px;
+}
+
+#result-btn:hover {
+    background-color:#750a1c;
 }
