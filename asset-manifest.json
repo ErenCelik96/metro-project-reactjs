@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/istanbul_metro_ReactJs/static/css/main.588fe6e1.chunk.css",
-    "main.js": "/istanbul_metro_ReactJs/static/js/main.2e31b9aa.chunk.js",
-    "main.js.map": "/istanbul_metro_ReactJs/static/js/main.2e31b9aa.chunk.js.map",
+    "main.js": "/istanbul_metro_ReactJs/static/js/main.e7664f54.chunk.js",
+    "main.js.map": "/istanbul_metro_ReactJs/static/js/main.e7664f54.chunk.js.map",
     "runtime-main.js": "/istanbul_metro_ReactJs/static/js/runtime-main.f8f3970f.js",
     "runtime-main.js.map": "/istanbul_metro_ReactJs/static/js/runtime-main.f8f3970f.js.map",
     "static/js/2.354f9e99.chunk.js": "/istanbul_metro_ReactJs/static/js/2.354f9e99.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.f8f3970f.js",
     "static/js/2.354f9e99.chunk.js",
     "static/css/main.588fe6e1.chunk.css",
-    "static/js/main.2e31b9aa.chunk.js"
+    "static/js/main.e7664f54.chunk.js"
   ]
 }
