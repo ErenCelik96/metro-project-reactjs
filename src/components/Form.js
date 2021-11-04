@@ -1,92 +1,111 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from "react";
 
 export default function Form() {
-    const [gDurak, setGdurak] = useState();
-    const [bDurak, setBdurak] = useState();
-    const [gYön, setGyön] = useState();
-    const [item, setItem] = useState("....");
+  const [targetStation, setTargetStation] = useState();
+  const [currentStation, setCurrentStation] = useState();
+  const [direction, setDirection] = useState();
+  const [duration, setDuration] = useState(0);
+  const [stations, setStations] = useState([]);
 
+  useEffect(() => {
+    let url = "http://localhost:3000/stations";
+    return fetch(url)
+      .then((response) => response.json())
+      .then((result) => setStations(result));
+  }, []);
 
-    function handleChange1(event) {
-        setGdurak(event.target.value)
+  function handleChange1(event) {
+    setTargetStation(event.target.value);
+  }
+
+  function handleChange2(event) {
+    setCurrentStation(event.target.value);
+  }
+
+  function handleChange3(event) {
+    setDirection(event.target.value);
+  }
+
+  function handleClear(){
+      setTargetStation("");
+      setCurrentStation("");
+      setDirection("");
+      setDuration(0);
+  }
+
+  function handleResult() {
+    if (direction === "Kadıköy yönü") {
+      setDuration((currentStation - targetStation) * 2);
+    } else {
+      setDuration((targetStation - currentStation) * 2);
     }
+  }
 
-    function handleChange2(event) {
-        setBdurak(event.target.value)
-    }
 
-    function handleChange3(event) {
-        setGyön(event.target.value)
-    }
-    
-    function result() {
-        if (gYön =="Kadıköy yönü") {
-           setItem((bDurak-gDurak)*2);
-        } else if (gYön =="Tavşantepe yönü") {
-            setItem((gDurak-bDurak)*2);
-        }
-    }
-
-    return (
-        <div className="form d-flex align-items-center justify-content-center">
-            <div className="form-container">
-                <label for="exampleFormControlSelect1">Gidilecek Yön</label>
-                <select name="gYön" onChange={handleChange3} className="form-control mb-5" id="exampleFormControlSelect1">
-                    <option value="">Lütfen gitmek istediğiniz yönü seçiniz..</option>
-                    <option value="Kadıköy yönü">Kadıköy yönü</option>
-                    <option value="Tavşantepe yönü">Tavşantepe yönü</option>
-                </select>
-                <label for="exampleFormControlSelect1">Bulunduğunuz Durak</label>
-                <select name="bDurak" onChange={handleChange2} className="form-control mb-5" id="exampleFormControlSelect1">
-                    <option value="">Lütfen bulunduğunuz durağı seçiniz..</option>
-                    <option value="1">Kadıköy</option>
-                    <option value="2">Ayrılık Çeşmesi</option>
-                    <option value="3">Acıbadem</option>
-                    <option value="4">Ünalan</option>
-                    <option value="5">Uzunçayır</option>
-                    <option value="6">Göztepe</option>
-                    <option value="7">Yenisahra</option>
-                    <option value="8">Kozyatağı</option>
-                    <option value="9">Bostancı</option>
-                    <option value="10">Küçükyalı</option>
-                    <option value="11">Maltepe</option>
-                    <option value="12">Huzurevi</option>
-                    <option value="13">Gülsuyu</option>
-                    <option value="14">Esenkent</option>
-                    <option value="15">Hastane Adliye</option>
-                    <option value="16">Soğanlık</option>
-                    <option value="17">Kartal</option>
-                    <option value="18">Yakacık</option>
-                    <option value="19">Pendik</option>
-                    <option value="20">Tavşantepe</option>
-                </select>
-                <label for="exampleFormControlSelect1">Gidilecek Durak</label>
-                <select name='gDurak' onChange={handleChange1} className="form-control mb-5" id="exampleFormControlSelect1">
-                    <option value="">Lütfen gitmek istediğiniz durağı seçiniz..</option>
-                    <option value="1">Kadıköy</option>
-                    <option value="2">Ayrılık Çeşmesi</option>
-                    <option value="3">Acıbadem</option>
-                    <option value="4">Ünalan</option>
-                    <option value="5">Uzunçayır</option>
-                    <option value="6">Göztepe</option>
-                    <option value="7">Yenisahra</option>
-                    <option value="8">Kozyatağı</option>
-                    <option value="9">Bostancı</option>
-                    <option value="10">Küçükyalı</option>
-                    <option value="11">Maltepe</option>
-                    <option value="12">Huzurevi</option>
-                    <option value="13">Gülsuyu</option>
-                    <option value="14">Esenkent</option>
-                    <option value="15">Hastane Adliye</option>
-                    <option value="16">Soğanlık</option>
-                    <option value="17">Kartal</option>
-                    <option value="18">Yakacık</option>
-                    <option value="19">Pendik</option>
-                    <option value="20">Tavşantepe</option>
-                </select>
-                <button id="result-btn" type="button" onClick={() => result()}>SONUÇ</button>
-                <p id="result" className="text-white">{item<0 ?  "Hatalı durak girişi! Lütfen tekrar deneyiniz.": `Ortalama ${item} dakika sonra gitmek istediğiniz durağa varacaksınız.`} <br /> İyi yolculuklar dileriz..</p>
-            </div>
-        </div>
-    )
+  return (
+    <div className="form d-flex align-items-center justify-content-center">
+      <div className="form-container">
+        <label for="exampleFormControlSelect1">Gidilecek Yön</label>
+        <select
+          name="direction"
+          onChange={(e)=>handleChange3(e)}
+          className="form-control mb-5"
+          id="exampleFormControlSelect1"
+          value={direction}
+        >
+          <option value="">Lütfen gitmek istediğiniz yönü seçiniz..</option>
+          <option value="Kadıköy yönü">Kadıköy yönü</option>
+          <option value="Tavşantepe yönü">Tavşantepe yönü</option>
+        </select>
+        <label for="exampleFormControlSelect1">Bulunduğunuz Durak</label>
+        <select
+          name="currentStation"
+          onChange={(e)=>handleChange2(e)}
+          className="form-control mb-5"
+          id="exampleFormControlSelect1"
+          value={currentStation}
+        >
+          <option value="">Lütfen bulunduğunuz durağı seçiniz..</option>
+          {stations.map((station) => (
+            <>
+              <option key={station.id} value={station.id}>
+                {station.stationName}
+              </option>
+            </>
+          ))}
+        </select>
+        <label for="exampleFormControlSelect1">Gidilecek Durak</label>
+        <select
+          name="targetStation"
+          onChange={(e)=>handleChange1(e)}
+          className="form-control mb-5"
+          id="exampleFormControlSelect1"
+          value={targetStation}
+        >
+          <option value="">Lütfen gitmek istediğiniz durağı seçiniz..</option>
+          {stations.map((station) => (
+            <>
+              <option key={station.id} value={station.id}>
+                {station.stationName}
+              </option>
+            </>
+          ))}
+        </select>
+        <button  id="result-btn" class="bg-success" type="button" onClick={() => handleResult()}>
+          SORGULA
+        </button>
+        <button id="result-btn" type="button" onClick={() => handleClear()}>
+          BİLGİLERİ SIFIRLA
+        </button>
+        <p id="result" className="text-white">
+          {duration === 0
+            ? `Hoşgeldiniz. Başlamak için lütfen yön ve durak seçimi yapınız.`
+            : duration < 0
+            ? "Hatalı durak girişi! Lütfen tekrar deneyiniz."
+            : `Ortalama ${duration} dakika sonra gitmek istediğiniz durağa varacaksınız.`}{" "}
+          <br /> İyi yolculuklar dileriz..
+        </p>
+      </div>
+    </div>
+  );
 }

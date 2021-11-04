@@ -1,0 +1,84 @@
+{
+  "stations": [
+    {
+      "id": 1,
+      "stationName": "Kadıköy"
+    },
+    {
+      "id": 2,
+      "stationName": "Ayrılık Çeşmesi"
+    },
+    {
+      "id": 3,
+      "stationName": "Ünalan"
+    },
+    {
+      "id": 4,
+      "stationName": "Acıbadem"
+    },
+    {
+      "id": 5,
+      "stationName": "Uzunçayır"
+    },
+    {
+      "id": 6,
+      "stationName": "Göztepe"
+    },
+    {
+      "id": 7,
+      "stationName": "Yenisahra"
+    },
+    {
+      "id": 8,
+      "stationName": "Kozyatağı"
+    },
+    {
+      "id": 9,
+      "stationName": "Bostancı"
+    },
+    {
+      "id": 10,
+      "stationName": "Küçükyalı"
+    },
+    {
+      "id": 11,
+      "stationName": "Maltepe"
+    },
+    {
+      "id": 12,
+      "stationName": "Huzurevi"
+    },
+    {
+      "id": 13,
+      "stationName": "Gülsuyu"
+    },
+    {
+      "id": 14,
+      "stationName": "Esenkent"
+    },
+    {
+      "id": 15,
+      "stationName": "Hastane Adliye"
+    },
+    {
+      "id": 16,
+      "stationName": "Soğanlık"
+    },
+    {
+      "id": 17,
+      "stationName": "Kartal"
+    },
+    {
+      "id": 18,
+      "stationName": "Yakacık"
+    },
+    {
+      "id": 19,
+      "stationName": "Pendik"
+    },
+    {
+      "id": 20,
+      "stationName": "Tavşantepe"
+    }
+  ]
+}

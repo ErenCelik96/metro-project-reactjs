@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import './App.css';
 import Button from "@material-ui/core/Button";
 import Start from './components/Start';
@@ -10,13 +11,20 @@ import {
 } from "react-router-dom";
 
 function App() {
+
+  const [hideButton, setHideButton] = useState(false);
+
+  function handleChange(){
+    setHideButton(true);
+  }
+
   return (
     <Router>
     <div className="App">
       <nav>
         <Link to="/form" style={{ textDecoration: 'none' }}>
-        <Button id="start" variant="contained" color="secondary">
-          Başlamak için buraya tıklayın!
+        <Button id="start" variant="contained" color="secondary" hidden={hideButton} onClick={()=>handleChange()}>
+          Sorgu sayfası
         </Button>
         </Link>
       </nav>
