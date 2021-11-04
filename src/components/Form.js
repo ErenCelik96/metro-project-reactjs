@@ -26,11 +26,11 @@ export default function Form() {
     setDirection(event.target.value);
   }
 
-  function handleClear(){
-      setTargetStation("");
-      setCurrentStation("");
-      setDirection("");
-      setDuration(0);
+  function handleClear() {
+    setTargetStation("");
+    setCurrentStation("");
+    setDirection("");
+    setDuration(0);
   }
 
   function handleResult() {
@@ -41,14 +41,13 @@ export default function Form() {
     }
   }
 
-
   return (
     <div className="form d-flex align-items-center justify-content-center">
       <div className="form-container">
         <label for="exampleFormControlSelect1">Gidilecek Yön</label>
         <select
           name="direction"
-          onChange={(e)=>handleChange3(e)}
+          onChange={(e) => handleChange3(e)}
           className="form-control mb-5"
           id="exampleFormControlSelect1"
           value={direction}
@@ -60,7 +59,7 @@ export default function Form() {
         <label for="exampleFormControlSelect1">Bulunduğunuz Durak</label>
         <select
           name="currentStation"
-          onChange={(e)=>handleChange2(e)}
+          onChange={(e) => handleChange2(e)}
           className="form-control mb-5"
           id="exampleFormControlSelect1"
           value={currentStation}
@@ -77,7 +76,7 @@ export default function Form() {
         <label for="exampleFormControlSelect1">Gidilecek Durak</label>
         <select
           name="targetStation"
-          onChange={(e)=>handleChange1(e)}
+          onChange={(e) => handleChange1(e)}
           className="form-control mb-5"
           id="exampleFormControlSelect1"
           value={targetStation}
@@ -91,7 +90,12 @@ export default function Form() {
             </>
           ))}
         </select>
-        <button  id="result-btn" class="bg-success" type="button" onClick={() => handleResult()}>
+        <button
+          id="result-btn"
+          class="bg-success"
+          type="button"
+          onClick={() => handleResult()}
+        >
           SORGULA
         </button>
         <button id="result-btn" type="button" onClick={() => handleClear()}>
